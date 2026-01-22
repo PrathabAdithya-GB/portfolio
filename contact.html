@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Prathab Adithya GB</title>
+  <meta name="description" content="Contact — Portfolio of Prathab Adithya GB" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__row">
+      <a class="brand" href="index.html" aria-label="Go to home"><span class="brand__hash">#</span> Prathab Adithya GB.</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+        <a href="contact.html">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle theme" id="themeToggle">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </nav>
+      <div class="nav__actions">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="nav__mobile" hidden>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+  <main>
+    <section class="section reveal">
+
+      <div class="container">
+        <div class="card">
+          <h1 class="h2">Get in touch</h1>
+          <p class="muted">Have a project in mind or just want to say hello? Send a note — I usually reply within a day.</p>
+          <div class="grid grid--2">
+            
+            
+            <form action="https://formsubmit.co/gbprathabadithya@gmail.com" method="POST" class="form">
+
+              <label class="label">Name</label>
+              <input type="text" name="name" placeholder="Your name" required>
+
+              <label class="label">Email</label>
+              <input type="email" name="email" placeholder="Your email" required>
+
+              <label class="label">Message</label>
+              <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+
+              <!-- Config -->
+              <input type="hidden" name="_subject" value="New Portfolio Message">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+
+              <button class="btn" type="submit">Send Message</button>
+
+            </form>
+
+
+
+
+            <ul class="contact-list">
+              <li>📧 <a href="mailto:gbprathabadithya@gmail.com">gbprathabadithya@gmail.com</a></li>
+              <li>📍 Coimbatore, TamilNadu, India</li>
+              <li>🐙 <a href="https://github.com/PrathabAdithya-GB" target="_blank" rel="noopener">GitHub</a></li>
+              <li>🔗 <a href="https://www.linkedin.com/in/prathab-adithya-gb-student" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Prathab Adithya GB· Built with ❤️ · Smooth & professional.
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
+</body>
+</html>
