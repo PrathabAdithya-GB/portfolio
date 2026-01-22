@@ -715,3 +715,357 @@ body::after {
 [data-theme="dark"] body::after {
   background: rgba(0,0,0,0.65);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   PRO RESPONSIVE HERO SYSTEM
+=========================== */
+
+.hero-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+  text-align: center;
+}
+
+/* Desktop layout kicks in naturally */
+@media (min-width: 900px) {
+  .hero-wrap {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero-left {
+    flex: 1.2;
+  }
+
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* SOCIAL ICON SYSTEM */
+.hero-social {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+  gap: clamp(12px, 2vw, 18px);
+  margin-top: clamp(18px, 3vw, 28px);
+  max-width: 320px;
+}
+
+.hero-social a {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-social .icon {
+  width: 50%;
+  height: 50%;
+}
+
+/* Hover effects (desktop only) */
+@media (hover: hover) {
+  .hero-social a:hover {
+    transform: translateY(-4px) scale(1.08);
+    background: rgba(56,189,248,0.2);
+    box-shadow: 0 0 14px rgba(56,189,248,0.5);
+  }
+}
+
+/* IMAGE */
+.profile-frame {
+  max-width: min(380px, 80vw);
+  width: 100%;
+  padding: 4px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   GLOBAL RESPONSIVE SYSTEM
+=========================== */
+
+/* Prevent sideways scrolling bugs */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Better container scaling */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 32px);
+}
+
+/* Fluid typography */
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+p, li, a, input, textarea {
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+}
+
+/* ===========================
+   GRID SYSTEM (ALL PAGES)
+=========================== */
+.grid {
+  display: grid;
+  gap: clamp(16px, 3vw, 32px);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Stack grids on smaller screens */
+@media (max-width: 900px) {
+  .grid--2,
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   NAVBAR (ALL PAGES)
+=========================== */
+@media (max-width: 860px) {
+  .nav__links {
+    display: none;
+  }
+
+  .nav__toggle {
+    display: inline-flex;
+  }
+
+  .nav__mobile {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   HERO (HOME PAGE)
+=========================== */
+.hero-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(32px, 6vw, 80px);
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .hero-wrap {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .hero-left {
+    flex: 1.2;
+  }
+
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ===========================
+   SOCIAL ICONS (HOME)
+=========================== */
+.hero-social {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(44px, 1fr));
+  gap: clamp(12px, 3vw, 18px);
+  max-width: 320px;
+  margin-top: clamp(18px, 4vw, 28px);
+}
+
+.hero-social a {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-social .icon {
+  width: 50%;
+  height: 50%;
+}
+
+@media (hover: hover) {
+  .hero-social a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 14px rgba(56,189,248,0.5);
+  }
+}
+
+/* ===========================
+   CARDS (ABOUT / PROJECTS / EXPERIENCE / SKILLS)
+=========================== */
+.card {
+  padding: clamp(16px, 3vw, 28px);
+  border-radius: 18px;
+}
+
+/* ===========================
+   FORMS (CONTACT PAGE)
+=========================== */
+.form {
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  font-size: 16px; /* Prevent iOS zoom */
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+  text-align: center;
+  padding: clamp(20px, 4vw, 40px) 0;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+}
+
+/* ===========================
+   SAFE AREA (iPhone Notch)
+=========================== */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
