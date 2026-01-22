@@ -1069,3 +1069,252 @@ p, li, a, input, textarea {
     padding-right: env(safe-area-inset-right);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==============================
+   TRUE MOBILE-FIRST SYSTEM
+============================== */
+
+/* Reset & Safety */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ==============================
+   CONTAINER SYSTEM
+============================== */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: clamp(12px, 4vw, 32px);
+  padding-right: clamp(12px, 4vw, 32px);
+}
+
+/* ==============================
+   FLEX / GRID BASE
+============================== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.grid--2,
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==============================
+   NAVIGATION (MOBILE FIRST)
+============================== */
+.nav__links {
+  display: none;
+}
+
+.nav__toggle {
+  display: inline-flex;
+}
+
+/* Desktop nav */
+@media (min-width: 900px) {
+  .nav__links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__mobile {
+    display: none !important;
+  }
+}
+
+/* ==============================
+   HERO (HOME PAGE)
+============================== */
+.hero-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+/* Desktop hero */
+@media (min-width: 900px) {
+  .hero-wrap {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero-left {
+    flex: 1.2;
+  }
+
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ==============================
+   HERO SOCIAL ICONS
+============================== */
+.hero-social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.hero-social a {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid var(--border);
+}
+
+.hero-social .icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* ==============================
+   IMAGES
+============================== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Profile image */
+.profile-frame {
+  width: 100%;
+  max-width: 320px;
+}
+
+@media (min-width: 900px) {
+  .profile-frame {
+    max-width: 420px;
+  }
+}
+
+/* ==============================
+   TYPOGRAPHY (FLUID)
+============================== */
+h1 {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4.5vw, 2.2rem);
+}
+
+p, li, a, input, textarea {
+  font-size: clamp(0.95rem, 3vw, 1.05rem);
+}
+
+/* ==============================
+   CARDS / SECTIONS
+============================== */
+.card {
+  width: 100%;
+  padding: clamp(14px, 4vw, 28px);
+}
+
+/* ==============================
+   FORMS (MOBILE SAFE)
+============================== */
+.form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form input,
+.form textarea,
+.form button {
+  width: 100%;
+  font-size: 16px; /* Prevents iOS zoom */
+}
+
+/* ==============================
+   FOOTER
+============================== */
+.footer {
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.9rem;
+}
+
+/* ==============================
+   SAFE AREA (iPhone NOTCH)
+============================== */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
